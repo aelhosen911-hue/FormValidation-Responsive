@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 body {
   background: linear-gradient(225deg, #fc466b 0%, #3f5efb 100%);
@@ -16,15 +17,21 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
-  height: 70%;
+  height: 600px;
   border-radius: 15px;
   padding: 10px;
   box-shadow: 3px 3px 21px black;
-
+  transition: 0.3s;
   display: flex; /* يفعّل flexbox */
   flex-direction: column; /* العناصر تبقى عمودية */
   /* justify-content: center; توسيط عمودي */
   align-items: center;
+}
+@media (max-width: 767px) {
+  .form-container {
+    width: 400px;
+    height: 520px;
+  }
 }
 
 .user-icon {
@@ -100,7 +107,7 @@ form .password-container::before {
   background-color: #919191;
   margin-top: 30px;
   margin-left: -15px;
-  font-size: 21px;
+  font-size: 24px;
   letter-spacing: 5px;
   color: white;
   cursor: pointer;
@@ -110,16 +117,20 @@ form .password-container::before {
   background-color: #545454;
 }
 #error {
-  display: none; /* يخفيه افتراضياً */
-  color: #d8000c;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #020250;
   background-color: #ffd2d2;
   border: 1px solid #d8000c;
   padding: 10px 15px;
   border-radius: 8px;
   width: fit-content;
   max-width: 80%;
-  margin: 20px auto;
+  /* margin: 50px auto; */
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
+  top: 50px;
 }
